@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    color: #323a45;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    padding: 3rem 0;
+}
+
+img,
+.header-title,
+.link {
+    transition: all 0.1s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin: 0 auto;
+    position: relativ;
+    width: 1440px;
+    border: 1px solid #323a45;
+    padding: 5rem;
+}
+
+img {
+    width: 90%;
+}
+
+img:hover {
+    opacity: 0.4;
+}
+
+.nav-bar,
+.link-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-title:hover,
+.link:hover {
+    color: #848484;
+}
+
+.nav-bar {
+    justify-content: space-between;
+}
+
+.header-title {
+    font-weight: 700;
+}
+
+.link-list {
+    list-style: none;
+    gap: 4rem;
+}
+
+.dropdown {
+    display: none;
+    position: relative;
+    font-size: 1.75rem;
+}
+
+.dropdown-menu {
+    background: #fff;
+    font-size: 1rem;
+    list-style: none;
+    padding: 0.2rem;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 30;
+    transform: translatex(0);
+    transition: all 0.1s;
+}
+
+.dropdown>.dropdown-link:focus+.dropdown-menu {
+    transform: translatex(0);
+}
+
+.dropdown-content {
+    margin: 1rem 0;
+    width: 13rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.content-center {
+    margin: 2rem 0;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0.25rem 0;
+    width: 90%;
+}
+
+.product,
+.costs,
+.vendor {
+    font-size: 1.15rem;
+}
+
+.product {
+    font-weight: 400;
+}
+
+.vendor {
+    margin-bottom: 3.5rem;
+    color: #848484;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 4fr 2fr 3fr 2fr;
+    margin-top: 3rem;
+}
+
+.column {
+    margin-bottom: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer article h3 {
+    margin-bottom: 2.5rem;
+}
+
+footer article p span {
+    font-weight: 700;
+}
+
+.copyright {
+    margin: 1.5rem 0 1.5rem 0;
+    color: #848484;
+}
+
+@media (max-width: 576px) {
+    .flex-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 780px) {
+    .link-list {
+        display: none;
+    }
+    .dropdown {
+        display: inline;
+    }
+}
+
+@media (max-width: 1439px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
